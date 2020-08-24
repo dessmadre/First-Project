@@ -29,6 +29,7 @@ const Consulting = () => {
       </Box>
       <Box className={classes.content}>
         <Typography
+          className={classes.titleText}
           variant={matches ? 'h4' : 'h3'}
           style={{
             paddingTop: '30px',
@@ -76,6 +77,7 @@ const Consulting = () => {
           }}
         >
           <Typography
+            className={classes.titleText}
             variant={matches ? 'h4' : 'h3'}
             style={{
               textDecoration: 'underline',
@@ -110,6 +112,7 @@ const Consulting = () => {
           }}
         >
           <Typography
+            className={classes.titleText}
             variant={matches ? 'h4' : 'h3'}
             style={{
               textDecoration: 'underline',
@@ -170,6 +173,7 @@ const Consulting = () => {
           }}
         >
           <Typography
+            className={classes.titleText}
             variant={matches ? 'h4' : 'h3'}
             style={{
               textDecoration: 'underline',
@@ -224,6 +228,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#e6e6e6e',
     textAlign: 'center',
     padding: '50px',
+  },
+  titleText: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '20px',
+    },
   },
 }));
 const puzzle = require('../images/puzzle.jpg');

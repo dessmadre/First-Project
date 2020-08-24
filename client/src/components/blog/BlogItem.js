@@ -75,7 +75,7 @@ const BlogItem = ({ post }) => {
         <CardActions>
           {isAuthenticated && authButtons}
           <Button variant='contained' color='primary'>
-            Read More
+            Read
           </Button>
         </CardActions>
       </Card>
