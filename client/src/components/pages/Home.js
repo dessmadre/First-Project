@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/Styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Typography, Box, useMediaQuery } from '@material-ui/core';
 
 const Home = () => {
