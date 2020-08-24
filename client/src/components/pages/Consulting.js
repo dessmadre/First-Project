@@ -44,14 +44,7 @@ const Consulting = () => {
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie
-          ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Est
-          placerat in egestas erat imperdiet. Et egestas quis ipsum suspendisse
-          ultrices. Sapien faucibus et molestie ac feugiat sed lectus. Nunc sed
-          blandit libero volutpat sed cras ornare arcu dui. Ut consequat semper
-          viverra nam libero. Elementum nisi quis eleifend quam adipiscing vitae
-          proin. Nunc congue nisi vitae suscipit tellus mauris. Convallis a cras
-          semper auctor neque. Placerat duis ultricies lacus sed turpis.
-          Suspendisse interdum consectetur libero id faucibus.
+          ac feugiat sed lectus vestibulum mattis ullamcorper velit sed.
         </Typography>
       </Box>
       <Box
