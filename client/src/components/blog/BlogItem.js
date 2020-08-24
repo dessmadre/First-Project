@@ -37,7 +37,7 @@ const BlogItem = ({ post }) => {
       <Button variant='outlined' color='secondary' onClick={onDelete}>
         Delete
       </Button>
-      <Link to='/blog/post' className={classes.linkStyle}>
+      <Link to='/blog/create' className={classes.linkStyle}>
         <Button
           variant='outlined'
           color='primary'
@@ -74,9 +74,15 @@ const BlogItem = ({ post }) => {
         </CardActionArea>
         <CardActions>
           {isAuthenticated && authButtons}
-          <Button variant='contained' color='primary'>
-            Read
-          </Button>
+          <Link to={`/blog/post`} className={classes.linkStyle}>
+            <Button
+              onClick={() => setCurrent(post)}
+              variant='contained'
+              color='primary'
+            >
+              Read
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     </>

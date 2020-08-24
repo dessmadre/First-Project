@@ -41,14 +41,14 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { title, text, date } = req.body;
+    const { title, text, createdAt } = req.body;
 
     try {
       const newPost = new Post({
         user: req.user.id,
         title,
         text,
-        date,
+        createdAt,
       });
       const post = await newPost.save();
 
@@ -60,11 +60,37 @@ router.post(
   }
 );
 
+// @route     GET /blog/:id
+// @desc      Get a single blog post
+// @access    Public
+router.get('/:id', async (req, res) => {
+  const { title, text, createdAt } = req.body;
+
+  // Build post object
+  const postFields = {};
+  if (title) postFields.title = title;
+  if (text) postFields.text = text;
+  if (createdAt) postFields.createdAt = createdAt;
+
+  try {
+    let post = await Post.findById(req.params.id);
+
+    if (!post) return res.status(404).json({ msg: 'Not Found' });
+
+    post = await Post.findById(req.params.id);
+
+    res.json(post);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 // @route     PUT /blog/:id
 // @desc      Update a post
 // @access    Private
 router.put('/:id', auth, async (req, res) => {
-  const { title, text, date } = req.body;
+  const { title, text, createdAt } = req.body;
 
   // Build post object
   const postFields = {};

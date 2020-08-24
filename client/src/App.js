@@ -8,6 +8,7 @@ import Register from './components/auth/Register';
 import About from './components/pages/About';
 import Blog from './components/blog/Blog';
 import PostForm from './components/blog/PostForm';
+import Post from './components/blog/Post';
 import Events from './components/pages/Events';
 import Consulting from './components/pages/Consulting';
 import ContactForm from './components/pages/ContactForm';
@@ -45,7 +46,9 @@ function App() {
                 <Route exact path='/consulting' component={Consulting} />
                 <Route exact path='/events' component={Events} />
                 <Route exact path='/blog' component={Blog} />
-                <Route exact path='/blog/post' component={PostForm} />
+                <Route exact path='/blog/create' component={PostForm} />
+                <Route exact path={`/blog/post`} component={Post} />
+
                 <Route exact path='/contact' component={ContactForm} />
               </>
               <Footer></Footer>

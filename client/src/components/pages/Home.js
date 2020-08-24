@@ -5,10 +5,8 @@ import { Typography, Box, useMediaQuery } from '@material-ui/core';
 const Home = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
+
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
-  const matchesLG = useMediaQuery(theme.breakpoints.down('lg'));
-  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <>
