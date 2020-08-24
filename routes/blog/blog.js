@@ -41,12 +41,6 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    upload(req, res, err => {
-      if (!err) {
-        console.log(req.file);
-      }
-    });
-
     const { title, text, date } = req.body;
 
     try {
