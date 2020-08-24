@@ -26,6 +26,7 @@ const ContactForm = () => {
   const classes = useStyles();
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const matchXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
     <>
@@ -44,7 +45,7 @@ const ContactForm = () => {
             onSubmit={onSubmit}
           >
             <Typography
-              variant='h1'
+              variant={matchXS ? 'h2' : 'h1'}
               style={{
                 textAlign: 'center',
               }}
@@ -114,6 +115,12 @@ const useStyles = makeStyles(theme => ({
         width: '300px',
       },
     },
+    [theme.breakpoints.down('xs')]: {
+      '& .MuiTextField-root': {
+        margin: theme.spacing(1),
+        width: '200px',
+      },
+    },
   },
   containerStyle: {
     border: '10px solid',
@@ -143,6 +150,13 @@ const useStyles = makeStyles(theme => ({
   button2: {
     [theme.breakpoints.down('lg')]: {
       width: '300px',
+      height: '75px',
+      position: 'relative',
+      top: '8px',
+      left: '8px',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '200px',
       height: '75px',
       position: 'relative',
       top: '8px',
