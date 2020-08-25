@@ -39,7 +39,7 @@ const Blog = () => {
 
   const authButtons = (
     <>
-      <Link to='/blog/post' className={classes.linkStyle}>
+      <Link to='/blog/create' className={classes.linkStyle}>
         <Button color='secondary' variant='contained'>
           Create a new Post
         </Button>

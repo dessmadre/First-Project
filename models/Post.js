@@ -6,7 +6,8 @@ const PostSchema = mongoose.Schema({
     ref: 'users',
   },
   postImage: {
-    type: String,
+    data: Buffer,
+    contentType: String,
   },
   title: {
     type: String,
