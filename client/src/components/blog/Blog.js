@@ -79,6 +79,11 @@ const useStyles = makeStyles(theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridGap: '1rem',
+    [theme.breakpoints.down('lg')]: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      gridGap: '1rem',
+    },
   },
   mobilePostStyle: {
     [theme.breakpoints.down('md')]: {

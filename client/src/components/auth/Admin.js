@@ -100,7 +100,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      width: '60ch',
+      width: '45ch',
     },
     position: 'relative',
     margin: 'auto',
@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
     top: '25px',
   },
   buttonStyle: {
-    width: '470px',
+    width: '350px',
     justifySelf: 'center',
   },
   headerstyle: {

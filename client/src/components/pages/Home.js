@@ -13,10 +13,10 @@ const Home = () => {
       <Box className={classes.root}>
         <Box
           style={{
-            backgroundImage: `url(${letterC})`,
+            backgroundImage: `url(${long})`,
           }}
           className={classes.bgImages}
-          alt='Scott Graham'
+          alt='Matosem'
         ></Box>
         <Box
           style={{
@@ -73,6 +73,7 @@ const Home = () => {
   );
 };
 
+const long = require('../images/4build.jpg');
 const letterC = require('../images/letterC.jpg');
 const laptop = require('../images/laptop.jpg');
 const newspaper = require('../images/newspaper.jpg');
@@ -82,11 +83,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  imgStlye: {
-    width: '100%',
-    display: 'block',
-    position: 'relative',
-  },
+
   introStlye: {
     top: '10%',
     left: '12.5%',
@@ -112,19 +109,21 @@ const useStyles = makeStyles(theme => ({
   bgImages: {
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
-    height: '867px',
+    height: '75vh',
     display: 'block',
     [theme.breakpoints.down('lg')]: {
-      height: '800px',
+      height: '60vh',
     },
     [theme.breakpoints.down('md')]: {
-      height: '600px',
+      height: '55vh',
     },
     [theme.breakpoints.down('sm')]: {
-      height: '315px',
+      height: '50vh',
+      position: 'relative',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '175px',
+      height: '36vh',
+      position: 'relative',
     },
   },
 }));

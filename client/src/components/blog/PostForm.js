@@ -30,7 +30,11 @@ const PostForm = props => {
 
   const { title, text, postImage } = post;
 
-  const onChange = e => setPost({ ...post, [e.target.name]: e.target.value });
+  const onChange = e =>
+    setPost({
+      ...post,
+      [e.target.name]: e.target.value,
+    });
 
   const clearForm = e => {
     e.preventDefault();
@@ -102,27 +106,6 @@ const PostForm = props => {
               >
                 Create
               </Button>
-
-              <input
-                accept='image/*'
-                name='postImage'
-                className={classes.input}
-                id='outlined-button-file'
-                multiple
-                type='file'
-              />
-              <label htmlFor='outlined-button-file'>
-                <Button
-                  variant='outlined'
-                  color='primary'
-                  component='span'
-                  style={{
-                    margin: '2px',
-                  }}
-                >
-                  Upload
-                </Button>
-              </label>
             </Box>
           </form>
         </Container>

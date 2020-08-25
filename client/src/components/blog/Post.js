@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import BlogContext from '../../context/blog/blogContext';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const Post = props => {
@@ -17,19 +17,28 @@ const Post = props => {
     }
   }, [blogContext, current, props.history]);
 
+  const onClick = e => {
+    clearCurrent();
+    props.history.push('/blog');
+  };
+
   const [post, setPost] = useState({
     title: '',
     text: '',
-    postImage: '',
     createdAt: '',
   });
-  const { title, text, postImage, createdAt } = post;
+  const { title, text, createdAt } = post;
   return (
     <>
       <Container fixed>
         <Typography variant='h3'>{title}</Typography>
+        <Typography variant='subtitle2'>{createdAt}</Typography>
         <br />
-        <Typography>{text}</Typography>
+        <Typography variant='body1'>{text}</Typography>
+        <br />
+        <Button variant='contained' onClick={onClick}>
+          Back
+        </Button>
       </Container>
     </>
   );

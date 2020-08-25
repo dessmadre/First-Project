@@ -53,24 +53,20 @@ const BlogItem = ({ post }) => {
     <>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardMedia
-            component='img'
-            className={classes.media}
-            image={postImage}
-            alt=''
-          />
-          <CardContent>
-            <Typography variant='h5' component='h2' gutterBottom>
-              {title}
-            </Typography>
-            <Typography
-              variant='body2'
-              component='p'
-              className={classes.contentStyle}
-            >
-              {text}
-            </Typography>
-          </CardContent>
+          <Link to={`/blog/post`} className={classes.linkStyle}>
+            <CardContent onClick={() => setCurrent(post)}>
+              <Typography variant='h5' component='h2' gutterBottom>
+                {title}
+              </Typography>
+              <Typography
+                variant='body2'
+                component='p'
+                className={classes.contentStyle}
+              >
+                {text}
+              </Typography>
+            </CardContent>
+          </Link>
         </CardActionArea>
         <CardActions>
           {isAuthenticated && authButtons}
@@ -103,6 +99,7 @@ const useStyles = makeStyles(theme => ({
   },
   linkStyle: {
     textDecoration: 'none',
+    color: 'black',
   },
   contentStyle: {
     height: 60,
