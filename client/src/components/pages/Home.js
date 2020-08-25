@@ -20,21 +20,21 @@ const Home = () => {
         ></Box>
         <Box
           style={{
-            backgroundImage: `url(${laptop})`,
+            backgroundImage: `url(${stairs})`,
           }}
           className={classes.bgImages}
           alt='Dan Schiumarini'
         ></Box>
         <Box
           style={{
-            backgroundImage: `url(${newspaper})`,
+            backgroundImage: `url(${chair})`,
           }}
           className={classes.bgImages}
           alt='AbsolutVision'
         ></Box>
         <Box
           style={{
-            backgroundImage: `url(${meeting})`,
+            backgroundImage: `url(${meet})`,
           }}
           className={classes.bgImages}
           alt='Mario Gogh'
@@ -74,10 +74,10 @@ const Home = () => {
 };
 
 const long = require('../images/4build.jpg');
-const letterC = require('../images/letterC.jpg');
-const laptop = require('../images/laptop.jpg');
-const newspaper = require('../images/newspaper.jpg');
-const meeting = require('../images/meeting.jpg');
+
+const stairs = require('../images/stairs.jpg');
+const chair = require('../images/chair.jpg');
+const meet = require('../images/meet.jpg');
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -109,20 +109,20 @@ const useStyles = makeStyles(theme => ({
   bgImages: {
     backgroundSize: '100%',
     backgroundRepeat: 'no-repeat',
-    height: '75vh',
+    height: '80vh',
     display: 'block',
     [theme.breakpoints.down('lg')]: {
       height: '60vh',
     },
     [theme.breakpoints.down('md')]: {
-      height: '55vh',
+      height: '60vh',
     },
     [theme.breakpoints.down('sm')]: {
-      height: '50vh',
+      height: '55vh',
       position: 'relative',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '36vh',
+      height: '45vh',
       position: 'relative',
     },
   },
